@@ -4,6 +4,16 @@ An Archlinux Docker container for Sabnzbd and Sickrage.
 
 ## Usage:
 
+First create the volume locations to store sickrage and sabnzbd configuration and data:
+
+```bash
+sudo mkdir -p /srv/sickrage /srv/sabnzbd
+```
+
+This is important to ensure that your configuration / data persists when updating the container with a new one.
+
+
+
 ```bash
 sudo docker run -d --name sabnzbd-sickrage-arch \
 -v /srv/sickrage:/srv/sickrage \
