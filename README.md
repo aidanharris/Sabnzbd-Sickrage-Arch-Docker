@@ -41,4 +41,10 @@ sudo docker run -d --name sabnzbd-sickrage-arch -v /srv/sickrage:/srv/sickrage -
 ## To Do:
 
 * Upload the image to the Docker Hub
-* Look in to removing this repository to Gitlab. I may be able to get a nice workflow going where Gitlab CI builds and pushes the container to Docker Hub everytime something in the repo changes.
+* Look in to moving this repository to Gitlab. I may be able to get a nice workflow going where Gitlab CI builds and pushes the container to Docker Hub everytime something in the repo changes.
+* Reduce the size of the container:
+```bash
+docker run --rm --entrypoint=/bin/sh local/sabnzbd-sickrage-arch -c 'du -sh / 2>/dev/null | cut -f1'
+```
+
+The above comes in at 1.3G which isn't too large but could still be made smaller.
