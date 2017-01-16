@@ -70,7 +70,7 @@ For maximum productivity you could add the above to an `@daily` cronjob or a Sys
 * Look in to moving this repository to Gitlab. I may be able to get a nice workflow going where Gitlab CI builds and pushes the container to Docker Hub everytime something in the repo changes.
 * Reduce the size of the container:
 ```bash
-docker run --rm --entrypoint=/bin/sh local/sabnzbd-sickrage-arch -c 'du -sh / 2>/dev/null | cut -f1'
+docker run --rm --entrypoint=/bin/sh aidanharris/sabnzbd-sickrage-arch -c 'du -sh / 2>/dev/null | cut -f1'
 ```
 
 The above comes in at 1.3G which isn't too large but could still be made smaller.
