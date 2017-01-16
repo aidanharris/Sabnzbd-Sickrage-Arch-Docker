@@ -32,7 +32,9 @@ RUN pacman -S --needed --noconfirm \
     pacman -R --noconfirm par2cmdline && \
     pacman -U --noconfirm /tmp/par2cmdline-tbb/*.pkg.* && \
     pacman -U --noconfirm /tmp/sabnzbd/*.pkg.* && \
-    pacman -U --noconfirm /tmp/sickrage/*.pkg.*
+    pacman -U --noconfirm /tmp/sickrage/*.pkg.* && \
+    rm -rf /tmp/* && \
+    pacman -Sc --noconfirm
 
 # Add supervisord conf
 ADD conf/sabnzbd.ini /etc/supervisor.d/

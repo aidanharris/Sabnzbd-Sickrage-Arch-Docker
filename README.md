@@ -40,4 +40,5 @@ sudo docker run -d --name sabnzbd-sickrage-arch -v /srv/sickrage:/srv/sickrage -
 
 ## To Do:
 
-Upload the image to the Docker Hub
+* Upload the image to the Docker Hub
+* Look in to removing this repository to Gitlab. I may be able to get a nice workflow going where Gitlab CI builds and pushes the container to Docker Hub everytime something in the repo changes.
