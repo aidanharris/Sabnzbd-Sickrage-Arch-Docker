@@ -21,8 +21,6 @@ cd Sabnzbd-Sickrage-Arch-Docker
 sudo docker build --rm -t local/sabnzbd-sickrage-arch .
 ```
 
-This will be a lot easier after uploading to the Docker Hub (You won't have to build the container)...
-
 ## FAQ:
 
 ### I can't access sabnzbd on http://example.com:8080
