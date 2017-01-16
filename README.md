@@ -52,9 +52,9 @@ The main reason is the Aur. Having access to the AUR makes it so much easier to 
 ## Updating
 
 ```bash
+sudo docker pull aidanharris/sabnzbd-sickrage-arch # pull the latest container
 sudo docker stop sabnzbd-sickrage-arch # stop the container
 sudo docker rm sabnzbd-sickrage-arch # remove the old container
-sudo docker pull aidanharris/sabnzbd-sickrage-arch # pull the latest container
 sudo docker run -d --name sabnzbd-sickrage-arch \
 -v /srv/sickrage:/srv/sickrage \
 -v /srv/sabnzbd:/srv/sabnzbd \
