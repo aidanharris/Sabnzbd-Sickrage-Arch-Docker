@@ -35,7 +35,7 @@ sudo docker start sabnzbd-sickrage-arch # Start the docker container
 
 ## Why Arch
 
-The main reason is the Aur. Having access to the AUR makes it so much easier to install Sabnzbd and Sickrage. You only have to look at the [Dockerfile](https://github.com/aidanharris/Sabnzbd-Sickrage-Arch-Docker/blob/master/Dockerfile) to see this. Secondly it's not as bad as you might think! Because it's based on snapshots (See [pritunl/archlinux](https://hub.docker.com/r/pritunl/archlinux/)) the container should (hopefully) remain consistent overtime. Instead of updating the container with pacman (i.e `pacman -Syu`) you simply replace it with a newer container (see below).
+The main reason is the Aur. Having access to the AUR makes it so much easier to install Sabnzbd and Sickrage. You only have to look at the [Dockerfile](https://github.com/aidanharris/Sabnzbd-Sickrage-Arch-Docker/blob/master/Dockerfile) to see this. Secondly it's not as bad as you might think! Because it's based on snapshots (See [pritunl/archlinux](https://hub.docker.com/r/pritunl/archlinux/)) the container should (hopefully) remain consistent over time. Instead of updating the container with pacman (i.e `pacman -Syu`) you simply replace it with a newer container (see below).
 
 ## Updating
 
@@ -50,6 +50,8 @@ sudo docker run -d --name sabnzbd-sickrage-arch \
 -p 8081:8081 \
 aidanharris/sabnzbd-sickrage-arch # create the new container
 ```
+
+For maximum productivity you could add the above to an `@daily` cronjob or a System D timer (if that's your thing).
 
 ## To Do:
 
