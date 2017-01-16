@@ -4,7 +4,7 @@ An Archlinux Docker container for Sabnzbd and Sickrage.
 
 ## Usage:
 
-```
+```bash
 git clone https://github.com/aidanharris/Sabnzbd-Sickrage-Arch-Docker.git Sabnzbd-Sickrage-Arch-Docker
 cd Sabnzbd-Sickrage-Arch-Docker
 sudo docker build --rm -t local/sabnzbd-sickrage-arch .
@@ -19,7 +19,7 @@ This will be a lot easier after uploading to the Docker Hub (You won't have to b
 
 Sabnzbd by default listens only on localhost which means you may not be able to access it outside of the container. To fix this edit the sabnzbd config file as follows:
 
-```
+```bash
 sudo docker stop sabnzbd-sickrage-arch # Stop the docker container
 sudo sed -i 's/host = 127.0.0.1/host = 0.0.0.0/g' /srv/sabnzbd/sabnzbd.ini # Listen on all interfaces
 sudo docker start sabnzbd-sickrage-arch # Start the docker container
@@ -31,7 +31,7 @@ The main reason is the Aur. Having access to the AUR makes it so much easier to 
 
 ## Updating
 
-```
+```bash
 sudo docker stop sabnzbd-sickrage-arch
 sudo docker rm sabnzbd-sickrage-arch
 sudo docker pull local/sabnzbd-sickrage-arch # To Do: Change this to the docker image on the docker hub
