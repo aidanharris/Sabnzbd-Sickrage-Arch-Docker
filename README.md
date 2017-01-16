@@ -25,6 +25,8 @@ aidanharris/sabnzbd-sickrage-arch
 
 ## Building:
 
+You can build the image from source as follows:
+
 ```bash
 git clone https://github.com/aidanharris/Sabnzbd-Sickrage-Arch-Docker.git Sabnzbd-Sickrage-Arch-Docker
 cd Sabnzbd-Sickrage-Arch-Docker
