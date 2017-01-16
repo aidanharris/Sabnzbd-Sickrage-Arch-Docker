@@ -45,7 +45,7 @@ sudo sed -i 's/host = 127.0.0.1/host = 0.0.0.0/g' /srv/sabnzbd/sabnzbd.ini # Lis
 sudo docker start sabnzbd-sickrage-arch # Start the docker container
 ```
 
-## Why Arch
+## Why Arch?
 
 The main reason is the Aur. Having access to the AUR makes it so much easier to install Sabnzbd and Sickrage. You only have to look at the [Dockerfile](https://github.com/aidanharris/Sabnzbd-Sickrage-Arch-Docker/blob/master/Dockerfile) to see this. Secondly it's not as bad as you might think! Because it's based on snapshots (See [pritunl/archlinux](https://hub.docker.com/r/pritunl/archlinux/)) the container should (hopefully) remain consistent over time. Instead of updating the container with pacman (i.e `pacman -Syu`) you simply replace it with a newer container (see below).
 
@@ -67,7 +67,6 @@ For maximum productivity you could add the above to an `@daily` cronjob or a Sys
 
 ## To Do:
 
-* Upload the image to the Docker Hub
 * Look in to moving this repository to Gitlab. I may be able to get a nice workflow going where Gitlab CI builds and pushes the container to Docker Hub everytime something in the repo changes.
 * Reduce the size of the container:
 ```bash
