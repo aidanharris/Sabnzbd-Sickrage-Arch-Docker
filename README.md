@@ -5,10 +5,20 @@ An Archlinux Docker container for Sabnzbd and Sickrage.
 ## Usage:
 
 ```bash
+sudo docker run -d --name sabnzbd-sickrage-arch \
+-v /srv/sickrage:/srv/sickrage \
+-v /srv/sabnzbd:/srv/sabnzbd \
+-p 8080:8080 \
+-p 8081:8081 \
+aidanharris/sabnzbd-sickrage-arch
+```
+
+## Building:
+
+```bash
 git clone https://github.com/aidanharris/Sabnzbd-Sickrage-Arch-Docker.git Sabnzbd-Sickrage-Arch-Docker
 cd Sabnzbd-Sickrage-Arch-Docker
 sudo docker build --rm -t local/sabnzbd-sickrage-arch .
-sudo docker run -d --name sabnzbd-sickrage-arch -v /srv/sickrage:/srv/sickrage -v /srv/sabnzbd:/srv/sabnzbd -p 8080:8080 -p 8081:8081 local/sabnzbd-sickrage-arch
 ```
 
 This will be a lot easier after uploading to the Docker Hub (You won't have to build the container)...
@@ -32,10 +42,15 @@ The main reason is the Aur. Having access to the AUR makes it so much easier to 
 ## Updating
 
 ```bash
-sudo docker stop sabnzbd-sickrage-arch
-sudo docker rm sabnzbd-sickrage-arch
-sudo docker pull local/sabnzbd-sickrage-arch # To Do: Change this to the docker image on the docker hub
-sudo docker run -d --name sabnzbd-sickrage-arch -v /srv/sickrage:/srv/sickrage -v /srv/sabnzbd:/srv/sabnzbd -p 8080:8080 -p 8081:8081 local/sabnzbd-sickrage-arch
+sudo docker stop sabnzbd-sickrage-arch # stop the container
+sudo docker rm sabnzbd-sickrage-arch # remove the old container
+sudo docker pull aidanharris/sabnzbd-sickrage-arch # pull the latest container
+sudo docker run -d --name sabnzbd-sickrage-arch \
+-v /srv/sickrage:/srv/sickrage \
+-v /srv/sabnzbd:/srv/sabnzbd \
+-p 8080:8080 \
+-p 8081:8081 \
+aidanharris/sabnzbd-sickrage-arch # create the new container
 ```
 
 ## To Do:
